@@ -1,0 +1,3 @@
+[submodule "themes/shared"]
+	path = themes/shared
+	url = https://github.com/drfknoble/marp-theme.git
