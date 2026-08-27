@@ -51,13 +51,15 @@ app/
 ```
 
 - Each file has one responsibility.
-- Props and state are typed, just like function parameters in lesson 09.
+- Props and state are typed, just like function parameters in lesson 12.
 
 ---
 
 ## A Typed Component
 
-```ts
+```tsx
+import { useState } from "react";
+
 interface CounterProps {
   label: string;
 }
@@ -66,6 +68,8 @@ function Counter({ label }: CounterProps) {
   const [count, setCount] = useState<number>(0);
   return <button onClick={() => setCount((c) => c + 1)}>{label} is {count}</button>;
 }
+
+export default Counter;
 ```
 
 ---

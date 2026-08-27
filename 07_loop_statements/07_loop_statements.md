@@ -42,7 +42,10 @@ while (count > 0) {
 ```
 
 ```text
-Output: 3 2 1
+Output:
+3
+2
+1
 ```
 
 ---

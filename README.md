@@ -49,7 +49,7 @@ See each lesson's README for exact commands.
 5. [05 User Input and Output](05_user_io/README.md)
 6. [06 Conditional Statements](06_conditional_statements/README.md)
 7. [07 Loop Statements](07_loop_statements/README.md)
-8. [08 Array Objects](08_array_objects/README.md)
+8. [08 Arrays and Objects](08_array_objects/README.md)
 9. [09 String Objects](09_string_objects/README.md)
 10. [10 Interfaces and Type Aliases](10_interfaces_types/README.md)
 11. [11 Union and Literal Types](11_union_literal_types/README.md)

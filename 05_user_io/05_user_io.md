@@ -45,10 +45,14 @@ Node.js provides `readline/promises` to read a line from the terminal.
 ```ts
 import { createInterface } from "readline/promises";
 
-const rl = createInterface({ input: process.stdin, output: process.stdout });
-const name = await rl.question("What is your name? ");
-rl.close();
-console.log(`Hello, ${name}`);
+async function main() {
+	const rl = createInterface({ input: process.stdin, output: process.stdout });
+	const name = await rl.question("What is your name? ");
+	rl.close();
+	console.log(`Hello, ${name}`);
+}
+
+main();
 ```
 
 ---

@@ -31,6 +31,7 @@ TypeScript's core primitive types:
 const age: number = 30;
 const learnerName: string = "Ada";
 const active: boolean = true;
+console.log(age, learnerName, active);
 ```
 
 ```text
@@ -58,10 +59,11 @@ let lessonCount: number = 12;
 
 ```ts
 let title = "Variables"; // inferred as string
+console.log(title);
 ```
 
 ```text
-Output: title has type string
+Output: Variables
 ```
 
 ---

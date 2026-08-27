@@ -63,7 +63,9 @@ for (const fruit of fruits) {
 ```
 
 ```text
-Output: apple, pear
+Output:
+apple
+pear
 ```
 
 ---
