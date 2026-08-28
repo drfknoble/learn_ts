@@ -14,6 +14,11 @@ Write reusable code that works with many types.
 
 `<T>` stands in for a type that is decided when the function is called.
 
+Generics solve a reuse problem: without them, we might write separate
+`identityNumber` and `identityString` functions. Unlike `any`, a generic keeps
+the relationship between the input and output, so a number comes back as a
+number and a string comes back as a string.
+
 ```ts
 function identity<T>(value: T): T {
   return value;
@@ -65,6 +70,11 @@ Output: 42
 ---
 
 ## Generic Classes
+
+The same class implementation can serve different element types. In
+`Stack<string>`, `T` becomes `string`, so `push` accepts strings and `pop`
+returns `string | undefined`. The `undefined` case matters because an empty
+stack has no item to return.
 
 ```ts
 class Stack<T> {

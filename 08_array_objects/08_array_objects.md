@@ -41,6 +41,12 @@ Output: 2
 
 ## Common Array Methods
 
+Array methods communicate what should happen to a collection:
+
+- `map` transforms every element and returns a new array.
+- `filter` keeps only elements that pass a test.
+- `reduce` combines the elements into one result, such as a total.
+
 ```ts
 const numbers: number[] = [1, 2, 3];
 const doubled = numbers.map((n) => n * 2);
@@ -50,6 +56,9 @@ console.log(doubled);
 ```text
 Output: [ 2, 4, 6 ]
 ```
+
+The example leaves `numbers` unchanged. Methods such as `map` and `filter`
+return new arrays; methods such as `push` change the existing array.
 
 ---
 
@@ -71,6 +80,11 @@ pear
 ---
 
 ## Objects as Structures
+
+Arrays and objects are values that can contain other values. A `const` binding
+prevents replacing the array or object, but it does not prevent changing its
+contents. TypeScript checks the element and property types while you write the
+code; JavaScript performs the operations when the program runs.
 
 ```ts
 const point = { x: 1, y: 2 };

@@ -30,6 +30,10 @@ Output: 12
 - Parameter types are annotated like variables.
 - The return type comes after the parameter list.
 
+The annotations form a contract: callers must supply the right arguments, and
+the implementation must return the promised type. A function can also be
+stored in a variable or passed to another function as a callback.
+
 ```ts
 function greet(name: string): string {
   return `Hello, ${name}`;
@@ -63,6 +67,11 @@ Output: 9
 ## Arrow Functions
 
 A compact syntax for writing functions, often used inline.
+
+An arrow function is still a value with a function type. This makes it useful
+for callbacks such as array transformations. Arrow functions also capture
+`this` from their surrounding scope, unlike a regular function's dynamic
+`this`.
 
 ```ts
 const triple = (value: number): number => value * 3;

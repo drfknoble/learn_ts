@@ -47,6 +47,11 @@ Output: up
 
 Check a union's runtime type before using type-specific members.
 
+TypeScript will not allow an operation unless it is valid for every member of
+the union. A type guard such as `typeof` narrows the value inside that branch.
+Other common guards include `instanceof`, the `in` operator, and a shared
+literal property such as `kind` in a discriminated union.
+
 ```ts
 function describe(value: number | string): string {
   if (typeof value === "number") {

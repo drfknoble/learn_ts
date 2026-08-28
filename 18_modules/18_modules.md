@@ -12,6 +12,10 @@ Split code across files with `import` and `export`.
 
 ## Exporting from a Module
 
+These are ES modules (ESM), the modern JavaScript module system. Node.js can
+also use CommonJS with `require` and `module.exports`; a project should choose
+one module style and configure TypeScript and Node.js consistently.
+
 ```ts
 // math.ts
 export function add(a: number, b: number): number {
@@ -40,6 +44,9 @@ Output: 5
 ---
 
 ## Default Exports
+
+An importer may choose any local name for a default export. Named exports keep
+their exported name, which makes the dependency visible at the import site.
 
 ```ts
 // greeter.ts

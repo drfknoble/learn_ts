@@ -32,6 +32,11 @@ Write and run a first TypeScript program.
 - TypeScript catches type errors before the code runs.
 - TypeScript source must be compiled to JavaScript to run.
 
+Compilation is a two-part step: `tsc` checks the types and emits JavaScript;
+then Node.js or a browser runs that JavaScript. Type annotations are removed
+from the emitted file because they guide development but are not runtime
+values.
+
 ---
 
 ## Hello World in JavaScript

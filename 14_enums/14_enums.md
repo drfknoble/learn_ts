@@ -12,6 +12,9 @@ Give names to a fixed set of related values.
 
 ## Numeric Enums
 
+Numeric enums create a runtime object. TypeScript also gives them reverse
+mapping, so `Direction[0]` looks up the member name for the numeric value.
+
 ```ts
 enum Direction {
   Up,
@@ -32,6 +35,10 @@ Up
 
 ## String Enums
 
+String enums map names to readable values, but do not provide the numeric
+reverse mapping. Explicit values are useful when the value crosses an API or
+must remain stable if members are reordered.
+
 ```ts
 enum Status {
   Active = "ACTIVE",
@@ -49,6 +56,8 @@ Output: ACTIVE
 ## const enum
 
 `const enum` is inlined at compile time, avoiding a runtime lookup object.
+That saves the runtime object but means there is nothing to inspect or iterate
+over at runtime.
 
 ```ts
 const enum Level {

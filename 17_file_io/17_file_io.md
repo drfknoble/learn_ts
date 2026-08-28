@@ -25,6 +25,11 @@ npm install
 
 ## Writing a File
 
+The `Sync` methods block the Node.js thread until the operating system finishes
+the file operation. They are convenient for a small script, but asynchronous
+methods are preferable in a server so other work can continue while a disk
+operation is waiting.
+
 ```ts
 import * as fs from "fs";
 
@@ -38,6 +43,9 @@ Output: output.txt is created with the given text.
 ---
 
 ## Reading a File
+
+Passing `"utf-8"` asks Node.js to return text. Without an encoding, the result
+is a `Buffer`, which is useful when handling binary data.
 
 ```ts
 import * as fs from "fs";

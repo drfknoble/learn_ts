@@ -14,6 +14,10 @@ Repeat work without duplicating code.
 
 Use when the number of iterations is known.
 
+The initializer runs once, the condition is checked before each iteration, and
+the update runs after each iteration. `break` exits early; `continue` skips the
+rest of the current iteration.
+
 ```ts
 for (let step = 1; step <= 3; step += 1) {
   console.log(`Step ${step}`);
@@ -71,6 +75,10 @@ Output: 1
 ## for...of Loop
 
 Iterate directly over the values of a collection.
+
+Choose `for...of` when the values matter more than their indexes. Use a
+traditional `for` loop when you need the index or precise control over the
+update, and `while` when the stopping condition comes from changing state.
 
 ```ts
 const colors: string[] = ["red", "green", "blue"];

@@ -42,6 +42,10 @@ console.table([{ id: 1, name: "Ada" }]);
 
 Node.js provides `readline/promises` to read a line from the terminal.
 
+The question is asynchronous: the program has to wait while a person types.
+`await` lets this function pause at the question and continue with the answer
+later, instead of treating the answer as if it were available immediately.
+
 ```ts
 import { createInterface } from "readline/promises";
 
@@ -61,6 +65,11 @@ main();
 
 - Reading input is asynchronous — use `await` inside an `async` function.
 - Always close the interface when done to let the program exit.
+
+While an asynchronous operation is waiting, Node.js can handle other work.
+This is different from a synchronous operation, which blocks the program until
+it finishes. An `async` function always returns a `Promise`, so `main()` starts
+the work and the event loop resumes the function after the user responds.
 
 ```text
 Output (after typing "Ada"):

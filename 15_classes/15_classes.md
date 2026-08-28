@@ -60,6 +60,10 @@ Output: 4
 
 ## Inheritance
 
+`extends` reuses a parent class's behavior. A subclass constructor must call
+`super(...)` before it can use `this`, and `super.method()` can call the parent
+implementation when overriding a method.
+
 ```ts
 class SteppedCounter extends Counter {
   increment(): void {
@@ -82,6 +86,9 @@ Output: 2
 - `public` — accessible anywhere (the default).
 - `private` — accessible only within the class.
 - `protected` — accessible within the class and its subclasses.
+
+Use a class when data needs shared behavior and instance identity. For plain
+data, an object described by an interface or type alias is often simpler.
 
 ```ts
 class Account {

@@ -15,6 +15,11 @@ Describe the shape of data with reusable, named types.
 - Object literal types can be repeated across a file.
 - `interface` and `type` let you name a shape once and reuse it.
 
+TypeScript uses **structural typing**: an object is compatible with a type when
+it has the required shape, even if the object was not created from that type.
+These names are compile-time descriptions; neither `interface` nor `type`
+creates a runtime object.
+
 ---
 
 ## interface
@@ -36,6 +41,10 @@ Output: { x: 0, y: 0 }
 
 ## type Alias
 
+An alias can name an object shape, a primitive, a union, or an intersection.
+Interfaces are often a good choice for extensible object contracts, while
+aliases are useful when combining types with `&` or `|`.
+
 ```ts
 type Size = { width: number; height: number };
 const box: Size = { width: 3, height: 4 };
@@ -49,6 +58,13 @@ Output: { width: 3, height: 4 }
 ---
 
 ## Extending an Interface
+
+`extends` creates a new interface that includes the members of the original.
+This is different from an intersection alias, which combines types with `&`:
+
+```ts
+type Point3DByAlias = Point & { z: number };
+```
 
 ```ts
 interface Point3D extends Point {

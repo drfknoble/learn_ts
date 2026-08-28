@@ -15,6 +15,11 @@ Represent the absence of a value safely.
 - `undefined` means a value has not been assigned yet.
 - `null` means a value is intentionally empty.
 
+This is a convention rather than a rule enforced by JavaScript. A useful
+project-wide choice is to use `undefined` for "not provided" and `null` for an
+explicitly empty result. With strict null checks enabled, TypeScript makes you
+handle these cases before using a value as a number or string.
+
 ```ts
 let a: number | undefined;
 let b: number | null = null;
@@ -30,6 +35,9 @@ Output: undefined null
 ## Optional Properties
 
 A `?` marks a property as optional; it may be `undefined`.
+
+An optional property can be missing entirely or be present with the value
+`undefined`. Either way, code that reads it must be prepared for no value.
 
 ```ts
 const profile: { nickname?: string } = {};

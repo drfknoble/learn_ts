@@ -24,6 +24,11 @@ Combine small, typed pieces into a maintainable program.
 - Real applications split code into components with clear boundaries.
 - A light-weight React app shows this at a small scale.
 
+The goal of a boundary is to make assumptions explicit: a component receives
+typed props, owns its local state, and exposes only what other files need. This
+keeps a change in one part of the application from requiring unrelated files
+to know its implementation details.
+
 ---
 
 ## Scaffolding with Vite
@@ -37,6 +42,10 @@ npm install
 ```
 
 - The `react-ts` template wires up React, TypeScript, and a dev server.
+
+Scaffolding supplies the build pipeline, but it does not design the application
+for you. The useful TypeScript habit is to keep the compiler involved as the
+project grows instead of treating types as something added at the end.
 
 ---
 
@@ -52,6 +61,11 @@ app/
 
 - Each file has one responsibility.
 - Props and state are typed, just like function parameters in lesson 12.
+
+`main.tsx` is the entry point that mounts the app. `App.tsx` composes the main
+view, while `Counter.tsx` owns one reusable piece of behavior. The exact names
+are not important; the separation makes ownership and dependencies easier to
+see.
 
 ---
 
