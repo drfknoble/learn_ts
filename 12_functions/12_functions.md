@@ -1,6 +1,6 @@
 ---
 marp: true
-theme: learn-ts
+theme: marp_theme
 title: Functions
 ---
 
