@@ -87,5 +87,6 @@ The source code and runnable examples, including `.ts`, `.js`, and `.html` files
 
 Created by @drfknoble.
 
+- [X](https://x.com/drfknoble)
 - [YouTube](https://www.youtube.com/@drfknoble)
 - [Ko-fi](https://ko-fi.com/drfknoble)
