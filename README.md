@@ -1,6 +1,6 @@
 # Learn TypeScript (TS)
 
-![Language: TypeScript](https://img.shields.io/badge/Language-TypeScript-blue)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support-29abe0?logo=ko-fi&logoColor=white)](https://ko-fi.com/drfknoble) ![Language: TypeScript](https://img.shields.io/badge/Language-TypeScript-blue)
 
 Learn TypeScript through a step-by-step tutorial series, with examples and explanations written in TypeScript.
 
@@ -74,14 +74,14 @@ Follow lessons in order from 01 to 19 for a progressive path.
 
 ## License
 
-This project is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+The educational materials, including Markdown lessons, lesson READMEs, and other non-code content, are licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). See [LICENSE_MATERIAL](LICENSE_MATERIAL) for the full terms.
 
 - Free to use and adapt for non-commercial purposes.
 - Attribution is required.
 - Commercial use is **not** allowed.
 - Derivative work must be shared under the same license.
 
-See [LICENSE](LICENSE) for full terms.
+The source code and runnable examples, including `.ts`, `.js`, and `.html` files, are licensed under the terms in [LICENSE_CODE](LICENSE_CODE). This license permits personal, educational, non-profit, and commercial use, but prohibits selling, distributing, or commercially capitalizing on the code and commercial distribution or sale of derivative works.
 
 ## Credits
 
