@@ -147,7 +147,7 @@ h2 {
 }
 
 main {
-  width: min(100% - 3rem, 1100px);
+  width: min(80%, 1100px);
   margin: 3rem auto;
   padding: 0 clamp(1.5rem, 5vw, 4.5rem);
   background: var(--paper);
